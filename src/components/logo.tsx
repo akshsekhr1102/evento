@@ -1,9 +1,10 @@
 import Image from "next/image"
 import Link from "next/link"
+import H1 from "./h1"
 
 const Logo = () => {
   return (
-    <Link href={'/'}><Image src={"https://bytegrad.com/course-assets/react-nextjs/evento.png"} alt="lEvento Logo"  height={60} width={60} /></Link>
+    <Link href={'/'}><h1 className="text-xl font-bold">EVENTO</h1></Link>
   )
 }
 

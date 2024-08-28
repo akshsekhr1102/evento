@@ -10,7 +10,7 @@ const EventCard = ({event}: EventCardProps) => {
   return (
   <Link href={`/event/${event.slug}`} className="h-[380px] flex-1 max-w-[500px] basis-80">
     <section className="w-full h-full relative flex flex-col flex-1 basis-80  bg-white/[3%] rounded-xl overflow-hidden transition hover:scale-105 active:scale-[1.02]">
-        <Image src={"https://images.unsplash.com/photo-1566737236500-c8ac43014a67?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"} alt={event.name}  height={280} width={500} className="h-[60%] object-fit" />
+        <Image src={"https://images.unsplash.com/photo-1566737236500-c8ac43014a67?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"} alt={event.name}  height={280} width={500} className="h-[60%] object-cover" />
         <div className="flex flex-col flex-1 justify-center items-center ">
             <h2 className="text-2xl font-semibold ">{event.name}</h2>
             <p className="italic text-white/[75%]">{event.organizerName}</p>
