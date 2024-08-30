@@ -1,5 +1,6 @@
 import { EventoEvent } from '@/lib/types';
 import EventCard from './event-card';
+import { getEvents } from '@/lib/utils';
 
 type EventsListProps ={
   city:string
@@ -7,16 +8,7 @@ type EventsListProps ={
 
 const EventsList = async({city}:EventsListProps) => {
 
-  const response =  await fetch(
-    `https://bytegrad.com/course-assets/projects/evento/api/events?city=${city}`,
-    {
-      next: {
-        revalidate: 300,
-      }
-    }
-  );
-  const events:EventoEvent[] = await response.json();
-
+  const events = await getEvents(city);
 
   return (
     <section className='flex flex-wrap gap-10 justify-center px-[20px]  '>
